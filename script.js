@@ -174,7 +174,7 @@ contactForm.addEventListener('submit', function (event) {
 
     const formData = new FormData(contactForm);
     const object = Object.fromEntries(formData);
-    object.access_key = CONFIG.WEB3FORMS_KEY;
+    object.access_key =  "98247a05-cd6d-47b9-b8c5-26d42281e9f8";
     const json = JSON.stringify(object);
 
     fetch('https://api.web3forms.com/submit', {
