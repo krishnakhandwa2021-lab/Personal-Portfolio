@@ -1,0 +1,672 @@
+/* =========================================
+   KRISHNA DUBEY — PORTFOLIO STYLES
+   Theme : Purple + Dark
+   Font  : Poppins (from Google Fonts)
+   ========================================= */
+
+
+/* -------------------------
+   1. GLOBAL / RESET STYLES
+   These apply to every element
+-------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* padding won't grow the element's size */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #250e33;  /* dark background */
+  color: #e0dff5;              /* light text */
+  line-height: 1.7;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove bullet points from all lists */
+ul {
+  list-style: none;
+}
+
+/* The purple accent color used throughout */
+.purple {
+  color: #6a37ba;
+} 
+
+
+
+/* -------------------------
+   2. REUSABLE CARD STYLE
+   Used in About, Education, Contact sections
+-------------------------- */
+
+.card {
+  background-color: #1F2833;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+/* The wide card spans full width in a grid */
+.wide-card {
+  grid-column: 1 / -1;   /* stretch across all columns */
+}
+
+
+/* -------------------------
+   3. REUSABLE BUTTON STYLES
+-------------------------- */
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a855f7;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid #a855f7;
+  color: #a855f7;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #a855f7;
+  color: white;
+}
+
+
+/* -------------------------
+   4. SECTION COMMON STYLES
+   Every section uses these
+-------------------------- */
+
+section {
+  padding: 90px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Small text below a section heading */
+.section-sub {
+  text-align: center;
+  color: #9585b8;
+  margin-top: -36px;
+  margin-bottom: 48px;
+}
+
+
+/* -------------------------
+   5. NAVIGATION BAR
+-------------------------- */
+
+#navbar {
+  position: fixed;          /* stays at top while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;            /* always on top of other content */
+  padding: 16px 24px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* This class is added by JavaScript when user scrolls down */
+#navbar.scrolled {
+  background-color: rgba(15, 15, 26, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo text on the left */
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+/* Navigation links on the right */
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #c4b5e8;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(168, 85, 247, 0.15);
+  color: white;
+}
+
+/* Hamburger button — only shown on mobile */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* -------------------------
+   6. HOME / HERO SECTION
+-------------------------- */
+
+#home {
+  min-height: 100vh;              /* takes up full screen height */
+  display: flex;
+  flex-direction: row;            /* text on left, image on right */
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  gap: 40px;
+}
+
+/* Left side — all the text */
+.home-text {
+  flex: 1;                        /* takes remaining space */
+}
+
+#home h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* The "I am a ..." line */
+.role {
+  font-size: 1.4rem;
+  color: #9585b8;
+  margin-bottom: 16px;
+  min-height: 2em;        /* prevents layout shift while typing animation runs */
+}
+
+/* The typed text will be purple */
+#typedText {
+  color: #a855f7;
+  font-weight: 600;
+}
+
+/* Blinking cursor after the typed text */
+.cursor {
+  color: #a855f7;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #9585b8;
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Right side — the photo */
+.home-image {
+  flex: 0 0 280px;               /* fixed width: 280px, does not grow or shrink */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The profile image itself */
+#profilePhoto {
+  width: 450px;
+  height: 500px;
+  object-fit: cover;             /* crops the image to fill the circle */
+  border: 4px solid #66FCF1;    /* purple border around the photo */
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);  /* purple glow effect */
+  display: block;
+} 
+
+
+
+
+
+/* -------------------------
+   7. ABOUT SECTION
+-------------------------- */
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  gap: 20px;
+}
+
+.about-cards .card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a855f7;
+  margin-bottom: 10px;
+}
+
+.about-cards .card p {
+  font-size: 0.9rem;
+  color: #9585b8;
+}
+
+
+/* -------------------------
+   8. SKILLS SECTION
+-------------------------- */
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Each skill row */
+.skill-item {
+  background-color: #1a1630;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Top row: skill name on left, percentage on right */
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.skill-top span:last-child {
+  color: #a855f7;
+}
+
+/* The grey background bar */
+.skill-bar {
+  height: 8px;
+  background-color: #52408d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* The purple filled bar — width is set by JavaScript */
+/* The purple filled bar */
+.skill-fill {
+    height: 100%;
+    width: 80%; /* Changed from 0 so it displays immediately */
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: width 1.2s ease;
+}
+
+
+/* -------------------------
+   9. EDUCATION SECTION
+-------------------------- */
+
+.timeline {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 40px;
+  position: relative;
+}
+
+/* The vertical purple line on the left */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #7c3aed;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+/* Purple circle dot on the line */
+.dot {
+  position: absolute;
+  left: -33px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #a855f7;
+  border-radius: 50%;
+  border: 2px solid #0f0f1a;
+}
+
+/* Small label like "Current", "Completed" */
+.badge {
+  display: inline-block;
+  background-color: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+  font-size: 0.72rem;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.timeline-item .card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Organisation name */
+.org {
+  color: #a855f7;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Year range */
+.year {
+  color: #6b5f88;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.timeline-item .card p {
+  font-size: 0.88rem;
+  color: #9585b8;
+  margin-bottom: 14px;
+}
+
+/* Skill tags at the bottom of education card */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  font-size: 0.76rem;
+  background-color: rgba(168, 85, 247, 0.1);
+  color: #9585b8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+
+/* -------------------------
+   10. CONTACT SECTION
+-------------------------- */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-card a {
+  display: block;
+  font-size: 0.88rem;
+  color: #a855f7;
+}
+
+.contact-card a:hover {
+  color: #c084fc;
+}
+
+.contact-card small {
+  display: block;
+  font-size: 0.72rem;
+  color: #6b5f88;
+  margin-top: 4px;
+}
+
+/* Form Styles */
+.contact-form h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.85rem;
+  color: #9585b8;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+/* Make first label have no top margin */
+.contact-form label:first-of-type {
+  margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #0f0f1a;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 8px;
+  color: #e0dff5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* Highlight input border when user clicks on it */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a855f7;
+}
+
+.contact-form textarea {
+  resize: vertical;     /* user can resize vertically only */
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #a855f7;
+}
+
+/* Message shown after form submit */
+#formNote {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  min-height: 1.4em;
+}
+
+.success { color: #4ade80; }   /* green  */
+.error   { color: #f87171; }   /* red    */
+
+
+/* -------------------------
+   11. FOOTER
+-------------------------- */
+
+#footer {
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid rgba(168, 85, 247, 0.15);
+  color: #6b5f88;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-cv {
+  color: #a855f7;
+  font-size: 0.85rem;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 6px 18px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.footer-cv:hover {
+  background-color: rgba(168, 85, 247, 0.1);
+}
+
+
+/* -------------------------
+   12. RESPONSIVE (Mobile)
+   Applies when screen is smaller than 768px
+-------------------------- */
+
+@media (max-width: 768px) {
+  /* Stack about cards in single column */
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack contact grid in single column */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide nav links; show hamburger button */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 15, 26, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    z-index: 999;
+  }
+
+  /* When nav is open (class added by JS) */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  /* On mobile: stack image above text, center everything */
+  #home {
+    flex-direction: column-reverse;   /* image goes on top */
+    text-align: center;
+    padding-top: 110px;
+  }
+
+  .home-image {
+    flex: 0 0 auto;
+  }
+
+  /* Smaller image on mobile */
+  #profilePhoto {
+    width: 180px;
+    height: 180px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .timeline {
+    padding-left: 28px;
+  }
+}

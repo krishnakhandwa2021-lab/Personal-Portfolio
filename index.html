@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Dubey | Full Stack Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Our CSS file -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add this line right before your main script -->
+<script src="config.js"></script>
+</head>
+
+<body>
+
+  <!-- =====================
+       NAVIGATION BAR
+  ====================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo"> <h1>Portfolio </h1></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button for mobile -->
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </nav>
+
+
+  <!-- =====================
+       HOME / HERO SECTION
+  ====================== -->
+  <section id="home">
+
+    <!-- Left side: text -->
+    <div class="home-text">
+      <h1>Hi, I'm <span class="purple">Krishna Dubey</span></h1>
+      <p class="role">I am a <span id="typedText"></span><span class="cursor">|</span></p>
+      <p class="tagline">Passionate about building clean and useful software and  showcasing my skills and experience</p>
+
+      <div class="home-buttons">
+        <a href="#contact" class="btn-primary">Contact Me</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Right side: your photo -->
+    <!-- STEP: Replace "photo.jpg" with your actual image file name -->
+    <div class="home-image">
+      <img src="images/IMG_20260822_174539585_HDR.jpg" alt="Krishna Dubey" id="profilePhoto" /> 
+     
+    </div>
+
+  </section>
+
+
+  <!-- =====================
+       ABOUT SECTION
+  ====================== -->
+  <section id="about">
+    <h2>About <span class="purple">Me</span></h2>
+
+    <div class="about-cards">
+
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>I am Krishna Dubey, a passionate Full Stack Developer who loves solving problems through code and turning ideas into real applications.</p>
+      </div>
+
+      <div class="card">
+        <h3>What I Do</h3>
+        <p>I build web applications using JavaScript, Python, Java, and Node.js. I enjoy writing clean, readable, and maintainable code.</p>
+      </div>
+
+      <div class="card">
+        <h3>My Goal</h3>
+        <p>To grow as a developer every day, contribute to meaningful projects, and keep learning new technologies that solve real-world problems.</p>
+      </div>
+
+      <div class="card wide-card">
+        <h3>Beyond Code</h3>
+        <p>When I am not coding, I enjoy exploring new tech topics, practicing algorithms, and staying updated with trends in software development. I believe every day is a chance to become a better developer.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================
+       SKILLS SECTION
+  ====================== -->
+  <section id="skills">
+    <h2>My <span class="purple">Skills</span></h2>
+    <div class="skill-item">
+    <div class="skill-top">
+        <span>JavaScript / TypeScript</span>
+        <span>85%</span>
+    </div>
+    <div class="skill-bar">
+    <div class="skill-fill" style="width: 85%;"></div>
+</div>
+</div>
+
+<div class="skill-item">
+    <div class="skill-top">
+        <span>Python</span>
+        <span>80%</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-fill" style="width: 80%;"></div>
+    </div>
+</div>
+
+<div class="skill-item">
+    <div class="skill-top">
+        <span>Java</span>
+        <span>75%</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-fill" style="width: 75%;"></div>
+    </div>
+</div>
+
+<div class="skill-item">
+    <div class="skill-top">
+        <span>C / C++</span>
+        <span>70%</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-fill" style="width: 70%;"></div>
+    </div>
+</div>
+
+<div class="skill-item">
+    <div class="skill-top">
+        <span>Node.js</span>
+        <span>80%</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-fill" style="width: 80%;"></div>
+    </div>
+</div>
+
+<div class="skill-item">
+    <div class="skill-top">
+        <span>Git / GitHub</span>
+        <span>90%</span>
+    </div>
+    <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;"></div>
+    </div>
+</div>
+    
+  </section>
+
+
+  <!-- =====================
+       EDUCATION SECTION
+  ====================== -->
+  <section id="education">
+    <h2>My <span class="purple">Education</span></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="card">
+          <span class="badge">Current</span>
+          <h3>Bachelor's Degree</h3>
+          <p class="org">Oriental institute of science and technology</p>
+          <p class="year">2024-2028 &nbsp;</p>
+          <p>Btech in Computer Science &  Engineering </p>
+          <div class="tags">
+            <span>Computer Science</span>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="card">
+          <span class="badge">Completed</span>
+          <h3>Higher Secondary (12th)</h3>
+          <p class="org">Sophia Convent School </p>
+          <p class="year"> 2023-2024 &nbsp;</p>
+          <p>board - CSBE 
+            <br> 
+             CGPA-6.32 <p>
+          <div class="tags">
+            <span>Science / PCM</span>
+            <span>Mathematics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="card">
+          <span class="badge">Ongoing</span>
+          <h3>Online Courses &amp; Certifications</h3>
+          <p class="org">Coursera, Udemy, freeCodeCamp</p>
+          <p class="year">Ongoing-Sigma Prime by Apna College</p>
+          <p>Introduction to Cybersecurity-Cisco Networking Academy
+            <br> 
+            Certification of Skill Competency Soar-AI to Aspire
+          </p>
+          <div class="tags">
+            <span>Apna College</span>
+            <span>Cisco Networking Academy</span>
+            <span>Soar-AI to Aspire</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================
+       CONTACT SECTION
+  ====================== -->
+  <section id="contact">
+    <h2>Let's <span class="purple">Connect</span></h2>
+    <p class="section-sub">Have a project or opportunity? Feel free to reach out!</p>
+
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+
+        <div class="card contact-card">
+          <h4>📧 Email</h4>
+          <a href="krishna.khandwa2021@gmail.com">krishna.khandwa2021@gmail.com</a>
+          </div>
+
+        <div class="card contact-card">
+          <h4>🐙 GitHub</h4>
+          <a href="https://github.com/krishnakhandwa2021-lab" target="_blank"> krishnakhandwa2021-lab</a>
+          <small> GitHub</small>
+        </div>
+
+        <div class="card contact-card">
+          <h4>💼 LinkedIn</h4>
+          <a href="https://www.linkedin.com/in/krishna-dubey-335693330/?isSelfProfile=true" target="_blank">www.linkedin.com/in/krishna-dubey-335693330</a>
+          <small> LinkedIn</small>
+        </div>
+
+      </div>
+
+      <!-- Message Form -->
+      
+<form class="card contact-form" id="contactForm">
+    <h3>Send a Message</h3>
+    
+     <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Project Idea" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+    <button type="submit" id="sendBtn">Send Message</button>
+    
+</form>
+
+    </div>
+  </section>
+
+
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <footer id="footer">
+    <p>&copy; 2026 Krishna Dubey. Built with HTML, CSS &amp; JavaScript.</p>
+    <a href="Krishna Dubey Resume (1).pdf" download class="footer-cv">⬇ Download Resume</a>
+  </footer>
+
+
+  <!-- Our JavaScript file (placed at the bottom so HTML loads first) -->
+   <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
