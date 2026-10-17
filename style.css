@@ -267,7 +267,7 @@ section h2 {
   width: 450px;
   height: 500px;
   object-fit: cover;             /* crops the image to fill the circle */
-  border: 4px solid #66FCF1;    /* purple border around the photo */
+  border: 4px solid #7c3aed;    /* purple border around the photo */
   box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);  /* purple glow effect */
   display: block;
 } 
